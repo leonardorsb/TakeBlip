@@ -1,0 +1,15 @@
+﻿procedure MsgBoasVindas;
+var HoraAtual : OleVariant;
+var Hora : integer;
+begin
+  HoraAtual := aqDateTime.Now;
+  Hora:=aqDateTime.GetHours(HoraAtual);
+  Log.Message(Hora);
+
+  if (Hora > 0) and (Hora < 12) then
+    log.Message('Bom dia!')
+  else if (Hora >= 12) and (Hora < 18) then
+    Log.Message('Boa tarde!')
+    else Log.Message('Boa noite!');
+  
+end;
